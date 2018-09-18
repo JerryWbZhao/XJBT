@@ -28,6 +28,7 @@ class whtb(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.implicitly_wait(30)
+        driver.maximize_window()
         driver.find_element_by_xpath("//*[@id='rightNavContent']/li[1]").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='username']").send_keys("13100000000")
