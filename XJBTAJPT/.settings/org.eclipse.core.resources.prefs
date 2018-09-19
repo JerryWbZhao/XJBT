@@ -1,9 +1,11 @@
 eclipse.preferences.version=1
 encoding//src/QY/test_fmtb.py=utf-8
 encoding//src/QY/test_mktb.py=utf-8
-encoding//src/QY/test_whtb.py=utf-8
+encoding//src/QY/test_whtb1.py=utf-8
+encoding//src/QY/test_whtb2.py=utf-8
 encoding//src/QY/test_yctb.py=utf-8
 encoding//src/QY/test_yhtb.py=utf-8
 encoding//src/XJBT/all_test.py=utf-8
 encoding//src/XJBT/allcase_list.py=utf-8
+encoding//src/XJBT/runtest_htmltestrunner_autosendemail.py=utf-8
 encoding//src/XJBT/test_Login.py=utf-8

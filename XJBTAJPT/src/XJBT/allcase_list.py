@@ -8,10 +8,10 @@ Created on 2018年9月17日
 def caselist():
     alltestnames = [
     'XJBT.test_Login.Login',
-#    'QXN.test_forgetPassword.Forget',
     'QY.test_fmtb.fmtb',
     'QY.test_mktb.mktb',
-    'QY.test_whtb.whtb',
+    'QY.test_whtb1.whtb1',
+    'QY.test_whtb2.whtb2',
     'QY.test_yctb.yctb',
     'QY.test_yhtb.yhtb',
 
