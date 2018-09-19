@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os
 
-class whtb1(unittest.TestCase):
+class yctb1(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -22,17 +22,17 @@ class whtb1(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #危险化学品企业填报企业信息用例
-    def test_whtb1(self):
-        u"""危险化学品企业填报企业信息用例"""
+    #烟草企业填报用例
+    def test_yctb1(self):
+        u"""烟草企业填报用例"""
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.implicitly_wait(30)
         driver.maximize_window()
         driver.find_element_by_xpath("//*[@id='rightNavContent']/li[1]").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='username']").send_keys("13100000000")
-        driver.find_element_by_xpath("//*[@id='password']").send_keys("13100000000")
+        driver.find_element_by_xpath("//*[@id='username']").send_keys("13100000005")
+        driver.find_element_by_xpath("//*[@id='password']").send_keys("13100000005")
         driver.find_element_by_xpath("//*[@id='loginBtn']").click()
         time.sleep(5)
                 
@@ -41,16 +41,16 @@ class whtb1(unittest.TestCase):
             driver.find_element_by_xpath("//*[@id='navbar-container']/div[1]/a/img")
         except:
         #如果没有找到上面的元素就截取当前页面。
-            driver.get_screenshot_as_file("E:\\selenium_use_case\\error_png\\XJBT_whtb.png")
+            driver.get_screenshot_as_file("E:\\selenium_use_case\\error_png\\XJBT_yctb.png")
         
         driver.find_element_by_xpath("//*[@id='no_1005001']").click()
         time.sleep(3)
         
         #填写企业信息
         driver.find_element_by_xpath("//*[@id='fullname']").clear()
-        driver.find_element_by_xpath("//*[@id='fullname']").send_keys("新疆鑫业商贸有限公司")
+        driver.find_element_by_xpath("//*[@id='fullname']").send_keys("新疆新商盟烟草有限公司")
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[1]/div[2]/div/input").clear()
-        driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[1]/div[2]/div/input").send_keys("鑫业商贸")
+        driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[1]/div[2]/div/input").send_keys("新商盟烟草")
         
         #选择核发对象
         driver.find_element_by_xpath("//*[@id='select2-legalpersontype-container']").click()
@@ -59,7 +59,7 @@ class whtb1(unittest.TestCase):
         driver.implicitly_wait(30)
         
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[3]/div[2]/div/input").clear()
-        driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[3]/div[2]/div/input").send_keys("李建勇")
+        driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[3]/div[2]/div/input").send_keys("李三勇")
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[4]/div[1]/div/input").clear()
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[4]/div[1]/div/input").send_keys("88585858")
         
@@ -134,5 +134,5 @@ class whtb1(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(whtb1("test_whtb1"))
+    suite.addTest(yctb1("test_yctb1"))
     results = unittest.TextTestRunner().run(suite)    

@@ -34,7 +34,7 @@ if __name__ == '__main__':
             print_exc()
     print ('Running the tests...')
     
-filename = 'D:\\XJBT_Result_20180918.html'
+filename = 'D:\\XJBT_Result_20180919.html'
 fp = open(filename, 'wb')
 
 runner =HTMLTestRunner.HTMLTestRunner(

@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os
 
-class whtb1(unittest.TestCase):
+class mktb2(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -22,17 +22,17 @@ class whtb1(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #危险化学品企业填报企业证照用例
-    def test_whtb1(self):
-        u"""危险化学品企业填报企业证照用例"""
+    #煤矿企业填报企业证照用例
+    def test_mktb2(self):
+        u"""煤矿企业填报企业证照用例"""
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.implicitly_wait(30)
         driver.maximize_window()
         driver.find_element_by_xpath("//*[@id='rightNavContent']/li[1]").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='username']").send_keys("13100000000")
-        driver.find_element_by_xpath("//*[@id='password']").send_keys("13100000000")
+        driver.find_element_by_xpath("//*[@id='username']").send_keys("13100000006")
+        driver.find_element_by_xpath("//*[@id='password']").send_keys("13100000006")
         driver.find_element_by_xpath("//*[@id='loginBtn']").click()
         time.sleep(5)
                 
@@ -41,7 +41,7 @@ class whtb1(unittest.TestCase):
             driver.find_element_by_xpath("//*[@id='navbar-container']/div[1]/a/img")
         except:
         #如果没有找到上面的元素就截取当前页面。
-            driver.get_screenshot_as_file("E:\\selenium_use_case\\error_png\\XJBT_whtb.png")
+            driver.get_screenshot_as_file("E:\\selenium_use_case\\error_png\\XJBT_mktb.png")
         
         driver.find_element_by_xpath("//*[@id='no_1005001']").click()
         time.sleep(3)
@@ -50,7 +50,7 @@ class whtb1(unittest.TestCase):
         driver.execute_script(js)
         
         driver.find_element_by_xpath("//*[@id='enterprise-license-form']/div[2]/div[1]/div[1]/div[4]/input").clear()
-        driver.find_element_by_xpath("//*[@id='enterprise-license-form']/div[2]/div[1]/div[1]/div[4]/input").send_keys("危险化学品")
+        driver.find_element_by_xpath("//*[@id='enterprise-license-form']/div[2]/div[1]/div[1]/div[4]/input").send_keys("煤矿")
         
         #选择有效期开始日期
         driver.find_element_by_xpath("//*[@id='org-base-s']").click()
@@ -82,5 +82,5 @@ class whtb1(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(whtb1("test_whtb1"))
+    suite.addTest(mktb2("test_mktb2"))
     results = unittest.TextTestRunner().run(suite)    
