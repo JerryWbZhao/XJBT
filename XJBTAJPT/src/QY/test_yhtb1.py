@@ -35,6 +35,8 @@ class yhtb1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='password']").send_keys("13100000003")
         driver.find_element_by_xpath("//*[@id='loginBtn']").click()
         time.sleep(5)
+        driver.refresh()
+        time.sleep(5)
                 
         try:
         #寻找是否存在该元素id
@@ -65,15 +67,15 @@ class yhtb1(unittest.TestCase):
         
         #选择国民经济分类
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[5]/div[2]/div/span/span/a").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         driver.find_element_by_xpath("/html/body/div[6]/div/ul/li/div/span[1]").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         driver.find_element_by_xpath("/html/body/div[6]/div/ul/li/ul/li/div/span[2]").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         driver.find_element_by_xpath("/html/body/div[6]/div/ul/li/ul/li/ul/li/div/span[3]").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         driver.find_element_by_xpath("/html/body/div[6]/div/ul/li/ul/li/ul/li/ul/li/div/span[6]").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         
         #选择企业经济类型
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[6]/div[1]/div/span/span/a").click()
@@ -81,7 +83,7 @@ class yhtb1(unittest.TestCase):
         driver.find_element_by_xpath("/html/body/div[7]/div/ul/li/div/span[1]").click()
         driver.implicitly_wait(30)
         driver.find_element_by_xpath("/html/body/div[7]/div/ul/li/ul/li/div/span[4]").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         
         #选择行政隶属关系
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[6]/div[2]/div/span/span[1]/span/span[2]").click()
@@ -102,7 +104,7 @@ class yhtb1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='enterprise-complete-form']/div[9]/div[1]/div/span/span[1]/span/span[2]").click()
         driver.implicitly_wait(30)
         driver.find_element_by_xpath("html/body/span/span/span[2]/ul/li[2]").click()
-        driver.implicitly_wait(30)
+        time.sleep(1)
         
         #选取企业地址
         driver.find_element_by_xpath("//*[@id='showMap']").click()

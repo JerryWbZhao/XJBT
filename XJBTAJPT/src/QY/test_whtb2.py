@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os
 
-class whtb1(unittest.TestCase):
+class whtb2(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -23,7 +23,7 @@ class whtb1(unittest.TestCase):
         self.accept_next_alert = True
     
     #危险化学品企业填报企业证照用例
-    def test_whtb1(self):
+    def test_whtb2(self):
         u"""危险化学品企业填报企业证照用例"""
         driver = self.driver
         driver.get(self.base_url + "/")
@@ -82,5 +82,5 @@ class whtb1(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(whtb1("test_whtb1"))
+    suite.addTest(whtb2("test_whtb2"))
     results = unittest.TextTestRunner().run(suite)    
