@@ -35,6 +35,8 @@ class yhtb2(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='password']").send_keys("13100000003")
         driver.find_element_by_xpath("//*[@id='loginBtn']").click()
         time.sleep(5)
+        driver.refresh()
+        time.sleep(5)
                 
         try:
         #寻找是否存在该元素id
