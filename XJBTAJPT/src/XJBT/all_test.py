@@ -5,7 +5,7 @@ Created on 2018年9月17日
 @author: Jerry
 '''
 
-import re, os, math
+import re, os, math, time
 import unittest, doctest
 import HTMLTestRunner
 from XJBT import allcase_list
@@ -34,7 +34,8 @@ if __name__ == '__main__':
             print_exc()
     print ('Running the tests...')
     
-filename = 'D:\\XJBT_Result_20180926.html'
+now = time.strftime("%Y-%m-%d-%H%M%S",time.localtime(time.time()))     
+filename = 'D:\\XJBT_Result_'+now+r'.html'
 fp = open(filename, 'wb')
 
 runner =HTMLTestRunner.HTMLTestRunner(
